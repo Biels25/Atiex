@@ -1,0 +1,187 @@
+/* Importa as fontes do Google Fonts que serão usadas no projeto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Orbitron:wght@400;700&display=swap');
+
+/* Define as variáveis de cor e fontes para uso em todo o site (CSS Variables) */
+:root {
+    --bg-color: #0d0c1d; /* Azul noite profundo, cor de fundo reserva */
+    --container-bg: rgba(22, 22, 34, 0.9); /* Fundo do container, semi-transparente e mais opaco */
+    --text-color: #e0e0e0; /* Cor principal do texto */
+    --font-tech: 'Orbitron', sans-serif; /* Fonte para títulos, com tema "tech" */
+    --font-body: 'Roboto', sans-serif; /* Fonte para o corpo do texto */
+    
+    /* Paleta de Cores das Facções */
+    --color-erudicao: #007bff; /* Azul Elétrico */
+    --color-audacia: #ff6600; /* Laranja Vibrante */
+    --color-amizade: #a9a9a9; /* Cinza claro */
+    --color-divergente: #9932cc; /* Roxo */
+}
+
+/* Estilos aplicados ao corpo da página (<body>) */
+body {
+    background-color: var(--bg-color); /* Cor de fundo caso a imagem não carregue */
+    /* --- PONTO CHAVE: Imagem de fundo temática --- */
+    background-image: url('/bg_divergent.jpg'); /* Caminho para sua imagem na pasta `public` */
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Mantém a imagem fixa durante o scroll */
+    
+    color: var(--text-color);
+    font-family: var(--font-body);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    /* Efeito de vidro fosco e escurecimento sobre a imagem de fundo */
+    backdrop-filter: blur(3px) brightness(0.6); 
+    overflow: hidden; /* Evita barras de rolagem desnecessárias */
+}
+
+/* O elemento root do React, usado para garantir o alinhamento central */
+#root {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Estilo do container principal onde o conteúdo aparece */
+.container {
+    background: var(--container-bg);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7); /* Sombra mais forte para destacar */
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+    border: 2px solid transparent;
+    /* Borda com gradiente usando as cores das facções */
+    border-image: linear-gradient(45deg, var(--color-erudicao), var(--color-audacia)) 1;
+    backdrop-filter: blur(10px); /* Efeito de vidro fosco no próprio container */
+    position: relative;
+    z-index: 10;
+}
+
+/* Estilos para os títulos (H1, H2, H3) */
+h1, h2, h3 {
+    font-family: var(--font-tech);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Estilo do botão principal ("Iniciar Simulação") */
+.start-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 35px;
+    background-color: transparent;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: var(--font-tech);
+    border-radius: 5px;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3); /* Brilho sutil */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.start-button:hover {
+    background: linear-gradient(45deg, var(--color-erudicao), var(--color-audacia));
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 0 20px var(--color-erudicao), 0 0 20px var(--color-audacia);
+    transform: translateY(-3px) scale(1.02); /* Efeito de elevação */
+}
+
+/* Container para as respostas do quiz */
+#answers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 30px;
+}
+
+/* Estilo dos botões de resposta */
+.answer-btn {
+    background-color: rgba(42, 45, 52, 0.85);
+    color: var(--text-color);
+    border: 1px solid #4f535c;
+    padding: 18px;
+    font-size: 1.1em;
+    font-family: var(--font-body);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    width: 100%;
+    text-align: left;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Efeito ao passar o mouse sobre os botões de resposta */
+.answer-btn:hover {
+    background-color: rgba(59, 62, 71, 0.95);
+    border-color: var(--text-color);
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+}
+
+/* --- Estilos da Tela de Resultados --- */
+
+.result-container h1 {
+    font-size: 1.4em;
+    color: #aaa;
+}
+
+.result-container h2 { /* Nome da Facção (ex: Erudição) */
+    font-size: 2.5em;
+    margin-bottom: 25px;
+    text-shadow: 0 0 15px currentColor; /* Brilho com a cor da facção */
+}
+
+#result-final-course { /* Nome do curso */
+    font-size: 2em;
+    margin: 0 0 30px 0;
+    text-shadow: 0 0 15px currentColor;
+}
+
+.course-subtitle {
+    margin-top: -20px;
+    margin-bottom: 8px;
+    font-size: 1em;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px dashed #4f535c; /* Linha divisória tracejada */
+    margin: 35px 0;
+}
+
+.chart-container {
+    position: relative;
+    width: 90%;
+    max-width: 450px;
+    margin: 25px auto;
+}
+
+/* Título de seção ("Seu Perfil de Aptidão") */
+.result-section-title {
+    font-family: var(--font-tech);
+    font-size: 1.5em;
+    color: #e0e0e0;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
