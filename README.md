@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Teste de Aptidão - Simulação de Facção
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é um quiz interativo de aptidão de carreira, desenvolvido em React, com uma temática imersiva inspirada no universo do filme "Divergente".
 
-## Available Scripts
+O usuário responde a uma série de perguntas baseadas em cenários para determinar se sua aptidão se alinha mais com a **Lógica (Análise e Desenvolvimento de Sistemas)**, a **Ação (Mecatrônica)** ou a **Comunidade (Outros)**. Caso os resultados sejam equilibrados, o usuário é classificado como **Divergente**.
 
-In the project directory, you can run:
+## ✨ Funcionalidades
 
-### `npm start`
+* **Interface Temática:** Design, textos e imagens que criam uma atmosfera imersiva.
+* **Perguntas Aleatórias:** A cada nova tentativa, 4 perguntas são sorteadas de um banco de 12 questões, garantindo uma experiência única a cada vez.
+* **Animações e Transições:** Uso da biblioteca `framer-motion` para uma navegação fluida e agradável entre as telas e perguntas.
+* **Resultados Personalizados:** Ao final, um gráfico de rosca interativo, criado com `Chart.js`, mostra o desempenho do usuário em cada uma das três áreas de aptidão.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Tecnologias Utilizadas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Este projeto foi construído com as seguintes tecnologias:
 
-### `npm test`
+* **[React](https://reactjs.org/)**: Biblioteca para construir interfaces de usuário.
+* **[React Router DOM](https://reactrouter.com/)**: Para gerenciamento de rotas na aplicação.
+* **[Framer Motion](https://www.framer.com/motion/)**: Para animações declarativas e fluidas.
+* **[Chart.js](https://www.chartjs.org/)** & **[react-chartjs-2](https://react-chartjs-2.js.org/)**: Para a criação do gráfico de resultados.
+* **CSS Moderno**: Variáveis CSS para um tema consistente e fácil de manter.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🏁 Como Iniciar o Projeto
 
-### `npm run build`
+Siga os passos abaixo para rodar a aplicação em seu ambiente de desenvolvimento.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Pré-requisitos
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Antes de começar, você vai precisar ter instalado em sua máquina:
+* [Node.js](https://nodejs.org/en/) (versão 14 ou superior)
+* `npm` ou `yarn` como gerenciador de pacotes.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Passo a Passo
 
-### `npm run eject`
+1.  **Clone o Repositório**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    Primeiro, clone este repositório para a sua máquina local usando o terminal:
+    ```bash
+    git clone [https://github.com/seu-usuario/atiex-quiz.git](https://github.com/seu-usuario/atiex-quiz.git)
+    ```
+    *(Lembre-se de substituir `<URL_DO_SEU_REPOSITORIO>` pela URL real do seu projeto no GitHub)*
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2.  **Acesse a Pasta do Projeto**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    ```bash
+    cd atiex-quiz
+    ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3.  **Instale as Dependências**
 
-## Learn More
+    Dentro da pasta do projeto, execute o comando abaixo para instalar todas as bibliotecas e pacotes necessários.
+    ```bash
+    npm install
+    ```
+    *ou, se estiver usando Yarn:*
+    ```bash
+    yarn install
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4.  **Inicie o Servidor de Desenvolvimento**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    Após a instalação das dependências, inicie a aplicação com o comando:
+    ```bash
+    npm start
+    ```
+    *ou, com Yarn:*
+    ```bash
+    yarn start
+    ```
+    Isso irá iniciar o servidor de desenvolvimento e abrirá o projeto automaticamente em seu navegador padrão, geralmente no endereço **[http://localhost:3000](http://localhost:3000)**.
 
-### Code Splitting
+A página será recarregada automaticamente sempre que você fizer uma alteração nos arquivos do projeto.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📜 Scripts Disponíveis
 
-### Analyzing the Bundle Size
+Neste projeto, você pode rodar os seguintes scripts:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* `npm start`: Roda a aplicação em modo de desenvolvimento.
+* `npm run build`: Compila a aplicação para produção na pasta `build`.
+* `npm test`: Inicia o executor de testes no modo interativo.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+_Este projeto foi inicializado com [Create React App](https://github.com/facebook/create-react-app)._
