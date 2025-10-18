@@ -37,14 +37,13 @@ Antes de começar, você vai precisar ter instalado em sua máquina:
 
     Primeiro, clone este repositório para a sua máquina local usando o terminal:
     ```bash
-    git clone [https://github.com/seu-usuario/atiex-quiz.git](https://github.com/seu-usuario/atiex-quiz.git)
+    git clone https://github.com/Biels25/Atiex
     ```
-    *(Lembre-se de substituir `<URL_DO_SEU_REPOSITORIO>` pela URL real do seu projeto no GitHub)*
 
 2.  **Acesse a Pasta do Projeto**
 
     ```bash
-    cd atiex-quiz
+    cd Atiex
     ```
 
 3.  **Instale as Dependências**
