@@ -20,7 +20,7 @@
 body {
     background-color: var(--bg-color); /* Cor de fundo caso a imagem não carregue */
     /* --- PONTO CHAVE: Imagem de fundo temática --- */
-    background-image: url('/bg_divergent.jpg'); /* Caminho para sua imagem na pasta `public` */
+    background-image: url('/public/bg_divergent.jpg'); /* Caminho para sua imagem na pasta `public` */
     background-size: cover; /* Faz a imagem cobrir toda a tela */
     background-position: center; /* Centraliza a imagem */
     background-attachment: fixed; /* Mantém a imagem fixa durante o scroll */
